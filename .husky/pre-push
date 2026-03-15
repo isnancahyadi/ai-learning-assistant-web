@@ -1,0 +1,14 @@
+#!/bin/bash
+echo "Running pre-push checks..."
+# Check for test
+# if ! bun test:run; then
+#   echo "Testing issues found. Please check you code before committing."
+#   exit 1
+# fi
+# Build project
+if ! bun build; then
+  echo "Build failed. Please fix your code before push"
+  exit 1
+fi
+echo "Pre-push check passed"
+exit 0
