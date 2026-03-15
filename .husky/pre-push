@@ -6,7 +6,7 @@ echo "Running pre-push checks..."
 #   exit 1
 # fi
 # Build project
-if ! bun build; then
+if ! bun run build; then
   echo "Build failed. Please fix your code before push"
   exit 1
 fi
